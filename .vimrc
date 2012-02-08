@@ -1,35 +1,34 @@
 set nocompatible        "  be iMproved
 filetype off             "  required!
 
-set rtp+=~/dotfiles/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/dotfiles/neobundle.vim
 
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
+if has('vim_starting')
+  set runtimepath+=~/dotflies/neobudle.vim
+  call neobundle#rc(expand('~/.vim/'))
+endif
 
 " My Bundles here:
-Bundle 'railscasts'
-Bundle 'fugitive.vim'
-Bundle 'surround.vim'
-Bundle 'mru.vim'
-Bundle 'The-NERD-tree'
-Bundle 'The-NERD-Commenter'
-Bundle 'EasyMotion'
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-Bundle 'AutoClose'
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'thinca/vim-ref'
+NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'railscasts'
+NeoBundle 'fugitive.vim'
+NeoBundle 'surround.vim'
+NeoBundle 'mru.vim'
+NeoBundle 'The-NERD-tree'
+NeoBundle 'The-NERD-Commenter'
+NeoBundle 'EasyMotion'
+NeoBundle 'L9'
+NeoBundle 'FuzzyFinder'
+NeoBundle 'AutoClose'
 " Ruby/Rails
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-rails'
-Bundle 'snipMate'
+NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'snipMate'
 
 filetype plugin indent on     " required! 
-
-Bundle 'Shougo/neocomplcache'
-Bundle 'Shougo/unite.vim'
-Bundle 'thinca/vim-ref'
-Bundle 'thinca/vim-quickrun'
 
 " display
 " ----------------------
